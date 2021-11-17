@@ -1,31 +1,41 @@
-*{
-    margin: 0;
-    padding: 0;
-    list-style: nono;
-    box-sizing: border-box
+.flip-card-inner{
+    position: relative
 }
 
-img{
-    height: 200px;
-    width: 200px;
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
 }
 
-.img-start{
- border: 2px solid rebeccapurple;
+.flip-card-front,
+.flip-card-back,
+.flip-card-inner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
-#img-master{
- border: 3px dashed yellow;
+.flip-card{
+    width: 300px;
+    height: 300px;
 }
 
-.relative{
-    background: aqua;
-    width: 500px;
-    height: 500px;
+.flip-card-front{
+    background-color: lightpink;
+    color: white;
 }
 
-.absolute{
-    background: blue;
-    width: 100px;
-    height: 100px;
+.flip-card-back{
+    background-color: aquamarine;
+    transform:rotateY(180deg) ;
+    color: white;
+}
+
+.flip-card-inner:hover{
+    transform: rotateY(180deg);
+}
+
+.flip-card-inner{
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
 }
